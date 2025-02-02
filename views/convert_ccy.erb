@@ -1,0 +1,8 @@
+<h1>Convert <%= @exchange_from %></h1>
+<div>Go <a href="/">back</a>.</div>
+<ul>
+<% @currencies_list.each do |cy| %>
+  <% link = "/#{@exchange_from}/#{cy}"%>
+  <li><a href=<%= link %>>Convert 1 <%= @exchange_from %> to <%= cy %></a> </li>
+<% end %>
+</ul>
